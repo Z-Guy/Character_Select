@@ -1,4 +1,4 @@
-/*const FA = {
+const FA = {
   name: "Faust",
   value: 5
 };
@@ -13,35 +13,11 @@ const HC = {
 const BA = {
   name: "Baiken",
   value: 3
-};*/
+};
+avaible = [FA, MA, HC, BA]
 
 var fighter = document.getElementsByName('FighterSelect');
 var opponent = document.getElementsByName('OpponentSelect');
-var players = [];
-
-//Display the user's choice in an alert box when clicking the button
-function collect1() {
-  for (var i = 0; i < fighter.length; i++){
-    if (fighter[i].checked) {
-      alert("You have already picked " + fighter[i].value);
-    }
-  }
-}
-
-//Collect in the console what the user chose
-function collect2() {
-  for (var i = 0; i < fighter.length; i++){
-    if (fighter[i].checked) {
-      document.cookie = fighter[i].value;
-      console.log(document.cookie);
-    }
-  }
-}
-
-function getCollect2(){
-  const cDecoded = decodeURIComponent(document.cookie);
-  console.log(cDecoded);
-}
 
 //Display the user's choice on screen 
 function displayFighter(){
@@ -52,6 +28,7 @@ function displayFighter(){
   }
 }
 
+//Display the user's choice for opponent on screen 
 function displayOpponent(){
   for (var i = 0; i < opponent.length; i++) {
     if(opponent[i].checked){
@@ -60,11 +37,41 @@ function displayOpponent(){
   }
 }
 
+function versus(){
+  var fighterChoice, opponentChoice;
+  for (var i = 0; i < fighter.length; i++) {
+    if(fighter[i].checked){
+      fighterChoice = fighter[i].value;
+      for (var j = 0; j < avaible.length; j++) {
+        if(fighterChoice == avaible[j].name){
+          fighterValue = avaible[j].value;
+        }
+    }
+  }
+  for (var i = 0; i < opponent.length; i++) {
+    if(opponent[i].checked){
+      opponentChoice = opponent[i].value;
+      for (var j = 0; j < avaible.length; j++) {
+        if(opponentChoice == avaible[j].name){
+          opponentValue = avaible[j].value;
+        }
+    }
+    }
+  }
+  if(fighterChoice && opponentChoice){
+    document.getElementById("result").innerHTML = fighterChoice + " vs " + opponentChoice;
+    document.getElementById("result1").innerHTML = whosBetter(fighterValue, opponentValue);
+  } 
+  }
+}
+
 //Determine who won the fight
 function whosBetter(a, b){
-  return a.value > b.value 
-    ? a.name + " wins!!!" 
-    : b.value > a.value  
-    ? b.name + " wins!!!" 
+  return a > b 
+    ? "You Win!!!" 
+    : b > a  
+    ? " You Lose!!!" 
     : "Draw!!";
 }
+
+

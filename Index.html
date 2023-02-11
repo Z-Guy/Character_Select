@@ -33,23 +33,22 @@
         <div id="P1C"></div>
     </div>
 
-    <!---<button onclick="collect1(); collect2();" id = "pickOpponent">Select Opponent</button>--->
 
     <br><br>
 
     <h2>Choose your Opponent:</h2>
     <div class="left-side">
         <div class="P2">
-            <input type="radio" id="FA2" name="OpponentSelect" class ="OpponentInput" value="Faust" onclick="displayOpponent()">
+            <input type="radio" id="FA2" name="OpponentSelect" class ="FighterInput" value="Faust" onclick="displayOpponent()">
             <label for="FA2"><img src="Images\archive_faust.jpg" alt="Faust"></label>
     
-            <input type="radio" id="MA2" name="OpponentSelect" class ="OpponentInput" value="May" onclick="displayOpponent()">
+            <input type="radio" id="MA2" name="OpponentSelect" class ="FighterInput" value="May" onclick="displayOpponent()">
             <label for="MA2"><img src="Images\archive_may.jpg" alt="May"></label>
     
-            <input type="radio" id="HC2" name="OpponentSelect" class ="OpponentInput" value="Happy Chaos" onclick="displayOpponent()">
+            <input type="radio" id="HC2" name="OpponentSelect" class ="FighterInput" value="Happy Chaos" onclick="displayOpponent()">
             <label for="HC2"><img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos"></label>
     
-            <input type="radio" id="BA2" name="OpponentSelect" class ="OpponentInput" value="Baiken" onclick="displayOpponent()">
+            <input type="radio" id="BA2" name="OpponentSelect" class ="FighterInput" value="Baiken" onclick="displayOpponent()">
             <label for="BA2"><img src="Images\archive_baiken.jpg" alt="Baiken"></label>
     
         </div>
@@ -58,6 +57,11 @@
     <div class="right-side">
         <div id="P2C"></div>
     </div>
+
+    <button onclick="versus()" id = "versus">LET'S ROCK</button>
+
+    <div id="result"></div>
+    <div id="result1"></div>
     
     <script src="script.js"></script>
 </body>

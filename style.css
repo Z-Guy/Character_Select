@@ -26,7 +26,7 @@
 
 button {
     display: flex;
-    float: right;
+    float: center;
     margin-top: 50px;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -73,7 +73,7 @@ h2 {
     left: -9999px;
 }
 
-.OpponentInput{
+.OpponentInput{    
     position: absolute;
     left: -9999px;
 }
