@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id = "Fighter">
+    <h1>Choose Your Fighter!!!</h1>
+
+    <div class="mid">
+        <h2>Faust</h2>
+        <input type="radio" id="FA" name="FighterSelect" class ="input-hidden" value="Faust" onclick="displayFighter()">
+        <label for="FA"><img src="Images\archive_faust.jpg" alt="Faust"></label>
+    </div>
+    <div class="mid">
+        <h2>May</h2>
+        <input type="radio" id="MA" name="FighterSelect" class ="input-hidden" value="May" onclick="displayFighter()">
+        <label for="MA"><img src="Images\archive_may.jpg" alt="May"></label>
+    </div>
+    <div class="mid">
+        <h2>Happy Chaos</h2>
+        <input type="radio" id="HC" name="FighterSelect" class ="input-hidden" value="Happy Chaos" onclick="displayFighter()">
+        <label for="HC"><img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos"></label>
+    </div>
+    <div class="mid">
+        <h2>Baiken</h2>
+        <input type="radio" id="BA" name="FighterSelect" class ="input-hidden" value="Baiken" onclick="displayFighter()">
+        <label for="BA"><img src="Images\archive_baiken.jpg" alt="Baiken"></label>
+    </div>
+
+    <div id="result"></div>
+
+    <button onclick="collect1(); collect2(); window.location.href = 'Opponent.html';" id = "pickOpponent">Select Opponent</button>
+    
+    <script src="script.js"></script>
+</body>
