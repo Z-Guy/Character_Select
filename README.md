@@ -5,8 +5,7 @@ able to make the user's decsions transfer to the final page. So I will try it on
 <br>
 <br>
 <h1>Goals</h1>
-<li>
-  1) Structure page so that user can pick character and opponent
-  2) Let user's decesion transfer to the results section of page
-  3) Give user results based on choices
- </li>
+  1. Structure page so that user can pick character and opponent
+  2. Let user's decesion transfer to the results section of page
+  3. Give user results based on choices
+
