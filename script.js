@@ -46,6 +46,7 @@ function versus(){
         if(fighterChoice == avaible[j].name){
           fighterValue = avaible[j].value;
         }
+      }
     }
   }
   for (var i = 0; i < opponent.length; i++) {
@@ -62,8 +63,8 @@ function versus(){
     document.getElementById("result").innerHTML = fighterChoice + " vs " + opponentChoice;
     document.getElementById("result1").innerHTML = whosBetter(fighterValue, opponentValue);
   } 
-  }
 }
+
 
 //Determine who won the fight
 function whosBetter(a, b){
