@@ -16,14 +16,8 @@ const BA = {
 };*/
 
 var fighter = document.getElementsByName('FighterSelect');
+var opponent = document.getElementsByName('OpponentSelect');
 var players = [];
-
-//const player = document.querySelector("#pickOpponent"); //for moving on to the select opponent screen
-// opponent = document.querySelector("#startMatch"); //for moving on to the fight screen
-
-/*function setFighter(name) {
-  document.cookie = ${name};
-}*/
 
 //Display the user's choice in an alert box when clicking the button
 function collect1() {
@@ -53,7 +47,15 @@ function getCollect2(){
 function displayFighter(){
   for (var i = 0; i < fighter.length; i++) {
     if(fighter[i].checked){
-      document.getElementById("result").innerHTML = "You choose " + fighter[i].value;
+      document.getElementById("P1C").innerHTML = fighter[i].value;
+    }
+  }
+}
+
+function displayOpponent(){
+  for (var i = 0; i < opponent.length; i++) {
+    if(opponent[i].checked){
+      document.getElementById("P2C").innerHTML = opponent[i].value;
     }
   }
 }
