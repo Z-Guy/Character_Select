@@ -10,9 +10,9 @@
 </head>
 
 <body id = "Fighter">
-    <h1>Guilty Gear Stive</h1>
+    <h1>Guilty Gear Strive</h1>
 
-    <h2>Choose your Fighter:</h2>
+    <h2>Choose your Fighter:</h2><br>
     <div class="left-side">
         <div class="P1">
             <input type="radio" id="FA" name="FighterSelect" class ="FighterInput" value="Faust" onclick="displayFighter()">
@@ -24,8 +24,17 @@
             <input type="radio" id="HC" name="FighterSelect" class ="FighterInput" value="Happy Chaos" onclick="displayFighter()">
             <label for="HC"><img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos"></label>
 
+            <input type="radio" id="CH" name="FighterSelect" class ="FighterInput" value="Chipp Zanuff" onclick="displayFighter()">
+            <label for="CH"><img src="Images\archive_chp.jpg" alt="Chipp Zanuff"></label>
+
             <input type="radio" id="BA" name="FighterSelect" class ="FighterInput" value="Baiken" onclick="displayFighter()">
             <label for="BA"><img src="Images\archive_baiken.jpg" alt="Baiken"></label>
+
+            <input type="radio" id="ZA" name="FighterSelect" class ="FighterInput" value="Zato=1" onclick="displayFighter()">
+            <label for="ZA"><img src="Images\archive_zat.jpg" alt="Baiken"></label>
+
+            <input type="radio" id="RA" name="FighterSelect" class ="FighterInput" value="Ramlethal Valentine" onclick="displayFighter()">
+            <label for="RA"><img src="Images\archive_ram-1.jpg" alt="Ramlethal"></label>
         </div>
     </div>
 
@@ -36,21 +45,29 @@
 
     <br><br>
 
-    <h2>Choose your Opponent:</h2>
+    <h2>Choose your Opponent:</h2><br>
     <div class="left-side">
         <div class="P2">
-            <input type="radio" id="FA2" name="OpponentSelect" class ="FighterInput" value="Faust" onclick="displayOpponent()">
+            <input type="radio" id="FA2" name="OpponentSelect" class ="OpponentInput" value="Faust" onclick="displayOpponent()">
             <label for="FA2"><img src="Images\archive_faust.jpg" alt="Faust"></label>
     
-            <input type="radio" id="MA2" name="OpponentSelect" class ="FighterInput" value="May" onclick="displayOpponent()">
+            <input type="radio" id="MA2" name="OpponentSelect" class ="OpponentInput" value="May" onclick="displayOpponent()">
             <label for="MA2"><img src="Images\archive_may.jpg" alt="May"></label>
     
-            <input type="radio" id="HC2" name="OpponentSelect" class ="FighterInput" value="Happy Chaos" onclick="displayOpponent()">
+            <input type="radio" id="HC2" name="OpponentSelect" class ="OpponentInput" value="Happy Chaos" onclick="displayOpponent()">
             <label for="HC2"><img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos"></label>
+
+            <input type="radio" id="CH2" name="OpponentSelect" class ="OpponentInput" value="Chipp Zanuff" onclick="displayOpponent()">
+            <label for="CH2"><img src="Images\archive_chp.jpg" alt="Chipp Zanuff"></label>
     
-            <input type="radio" id="BA2" name="OpponentSelect" class ="FighterInput" value="Baiken" onclick="displayOpponent()">
+            <input type="radio" id="BA2" name="OpponentSelect" class ="OpponentInput" value="Baiken" onclick="displayOpponent()">
             <label for="BA2"><img src="Images\archive_baiken.jpg" alt="Baiken"></label>
-    
+            
+            <input type="radio" id="ZA2" name="OpponentSelect" class ="OpponentInput" value="Zato=1" onclick="displayOpponent()">
+            <label for="ZA2"><img src="Images\archive_zat.jpg" alt="Zato=1"></label>
+
+            <input type="radio" id="RA2" name="OpponentSelect" class ="OpponentInput" value="Ramlethal Valentine" onclick="displayOpponent()">
+            <label for="RA2"><img src="Images\archive_ram-1.jpg" alt="Ramlethal"></label> 
         </div>
     </div>
     

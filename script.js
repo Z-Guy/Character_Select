@@ -1,20 +1,11 @@
-const FA = {
-  name: "Faust",
-  value: 5
-};
-const MA = {
-  name: "May",
-  value: 5
-};
-const HC = {
-  name: "Happy Chaos",
-  value: 7
-};
-const BA = {
-  name: "Baiken",
-  value: 3
-};
-avaible = [FA, MA, HC, BA]
+const FA = {name: "Faust",type: "Unique",value: 5};
+const MA = {name: "May",type: "Balance",value: 5};
+const HC = {name: "Happy Chaos",type: "Shooting",value: 9};
+const CH = {name: "Chipp Zanuff",type: "High Speed",value: 6};
+const BA = {name: "Baiken",type: "Balance",value: 3};
+const ZA = {name: "Zato=1",type: "Technical",value: 4};
+const RA = {name: "Ramlethal Valentine",type: "Shooting",value: 7};
+available = [FA, MA, HC, CH, BA, ZA, RA];
 
 var fighter = document.getElementsByName('FighterSelect');
 var opponent = document.getElementsByName('OpponentSelect');
@@ -37,14 +28,15 @@ function displayOpponent(){
   }
 }
 
+//Simulate a fight based on given fighter values
 function versus(){
   var fighterChoice, opponentChoice;
   for (var i = 0; i < fighter.length; i++) {
     if(fighter[i].checked){
       fighterChoice = fighter[i].value;
-      for (var j = 0; j < avaible.length; j++) {
-        if(fighterChoice == avaible[j].name){
-          fighterValue = avaible[j].value;
+      for (var j = 0; j < available.length; j++) {
+        if(fighterChoice == available[j].name){
+          fighterValue = available[j].value;
         }
       }
     }
@@ -52,9 +44,9 @@ function versus(){
   for (var i = 0; i < opponent.length; i++) {
     if(opponent[i].checked){
       opponentChoice = opponent[i].value;
-      for (var j = 0; j < avaible.length; j++) {
-        if(opponentChoice == avaible[j].name){
-          opponentValue = avaible[j].value;
+      for (var j = 0; j < available.length; j++) {
+        if(opponentChoice == available[j].name){
+          opponentValue = available[j].value;
         }
     }
     }
