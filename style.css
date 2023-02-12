@@ -18,7 +18,7 @@
 
 #P2C {
     display: flex;
-    float: right;
+
     margin-top: 50px;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -76,6 +76,15 @@ h2 {
 .OpponentInput{    
     position: absolute;
     left: -9999px;
+}
+
+.results{
+    display: block;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 input[type="radio"]:checked + label > img {
