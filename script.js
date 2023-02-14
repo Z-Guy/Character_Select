@@ -10,18 +10,12 @@ available = [FA, MA, HC, CH, BA, ZA, RA];
 var fighter = document.getElementsByName('FighterSelect');
 var opponent = document.getElementsByName('OpponentSelect');
 
-//Display the user's choice on screen 
+//Display the user's choices on screen 
 function displayFighter(){
   for (var i = 0; i < fighter.length; i++) {
     if(fighter[i].checked){
       document.getElementById("P1C").innerHTML = fighter[i].value;
     }
-  }
-}
-
-//Display the user's choice for opponent on screen 
-function displayOpponent(){
-  for (var i = 0; i < opponent.length; i++) {
     if(opponent[i].checked){
       document.getElementById("P2C").innerHTML = opponent[i].value;
     }
@@ -30,33 +24,16 @@ function displayOpponent(){
 
 //Simulate a fight based on given fighter values
 function versus(){
-  var fighterChoice, opponentChoice;
-  for (var i = 0; i < fighter.length; i++) {
-    if(fighter[i].checked){
-      fighterChoice = fighter[i].value;
-      for (var j = 0; j < available.length; j++) {
-        if(fighterChoice == available[j].name){
-          fighterValue = available[j].value;
-        }
-      }
-    }
-  }
-  for (var i = 0; i < opponent.length; i++) {
-    if(opponent[i].checked){
-      opponentChoice = opponent[i].value;
-      for (var j = 0; j < available.length; j++) {
-        if(opponentChoice == available[j].name){
-          opponentValue = available[j].value;
-        }
-    }
-    }
-  }
-  if(fighterChoice && opponentChoice){
-    document.getElementById("result").innerHTML = fighterChoice + " vs " + opponentChoice;
-    document.getElementById("result1").innerHTML = whosBetter(fighterValue, opponentValue);
+  var userName = getName(fighter);
+  var userValue = getValue(userName);
+  var oppName = getName(opponent);
+  var oppValue = getValue(oppName);
+
+  if(getName(fighter) && getName(opponent)){
+    document.getElementById("result").innerHTML = userName+ " vs " + oppName;
+    document.getElementById("result1").innerHTML = whosBetter(userValue, oppValue);
   } 
 }
-
 
 //Determine who won the fight
 function whosBetter(a, b){
@@ -67,4 +44,20 @@ function whosBetter(a, b){
     : "Draw!!";
 }
 
+//Get the name of the fighter the user has picked
+function getName(roster){
+  for (var i = 0; i < roster.length; i++) {
+    if(roster[i].checked){
+      return roster[i].value;
+    }
+  }
+}
 
+//Correspond the user's choice with the right value
+function getValue(fightername){
+  for (var j = 0; j < available.length; j++) {
+    if(fightername == available[j].name){
+      return available[j].value;;
+    }
+  }
+}
